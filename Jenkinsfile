@@ -16,7 +16,7 @@ pipeline{
   stage ('Deploy'){
  		steps {
 
- 				sh '/Users/gtalwadker/MuleSoft/apache-maven-3.6.0/bin/mvn package deploy -Dusername=$ANYPOINT-LOCAL_USR -Dpassword=$ANYPOINT-LOCAL_PSW -Denvironment=Development -DmuleDeploy'
+ 				sh '/Users/gtalwadker/MuleSoft/apache-maven-3.6.0/bin/mvn package deploy -Dusername=gauravtalwadker3 -Dpassword=Welcome1 -Denvironment=Development -DmuleDeploy'
 
  		}
  	}
