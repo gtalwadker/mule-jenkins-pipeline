@@ -7,11 +7,11 @@ pipeline{
  	stage ('Build'){
  		steps {
 
- 				sh '"$MVN_HOME/bin/mvn" clean compile'
+ 				sh '/Users/gtalwadker/MuleSoft/apache-maven-3.6.0/bin/mvn clean package'
 
  		}
  	}
- 	
+
  }
 
 }
