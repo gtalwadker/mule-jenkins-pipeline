@@ -12,6 +12,14 @@ pipeline{
  		}
  	}
 
+
+  stage ('Deploy'){
+ 		steps {
+
+ 				sh '/Users/gtalwadker/MuleSoft/apache-maven-3.6.0/bin/mvn package deploy -Dusername=$ANYPOINT_USR -Dpassword=$ANYPOINT_PSW -Denvironment=Development -DmuleDeploy'
+
+ 		}
+ 	}
  }
 
 }
