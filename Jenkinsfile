@@ -7,12 +7,12 @@ pipeline{
  	stage ('Build'){
  		steps {
  			
- 				bat 'mvn clean compile'
+ 				sh 'mvn clean compile'
  			
  		}
  	}
  	stage ('Deploy'){
- 		steps { 				bat 'mvn package deploy  -Dusername=$ANYPOINT-LOCAL_USR -Dpassword=$ANYPOINT-LOCAL_PSW -Denvironment=Development -DmuleDeploy'
+ 		steps { 				sh 'mvn package deploy  -Dusername=$ANYPOINT-LOCAL_USR -Dpassword=$ANYPOINT-LOCAL_PSW -Denvironment=Development -DmuleDeploy'
  			
  		}
  	}
