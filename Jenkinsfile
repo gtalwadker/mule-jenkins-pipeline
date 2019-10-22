@@ -7,15 +7,11 @@ pipeline{
  	stage ('Build'){
  		steps {
 
- 				mvn clean compile
+ 				sh '"$MVN_HOME/bin/mvn" clean compile'
 
  		}
  	}
- 	stage ('Deploy'){
- 		steps { 				mvn package deploy  -Dusername=$ANYPOINT-LOCAL_USR -Dpassword=$ANYPOINT-LOCAL_PSW -Denvironment=Development -DmuleDeploy
-
- 		}
- 	}
+ 	
  }
 
 }
